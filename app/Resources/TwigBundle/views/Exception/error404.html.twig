@@ -1,0 +1,14 @@
+{# app/Resources/TwigBundle/views/Exception/errors.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>CRASH !!! </h1>
+
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        {# ... #}
+    {% endif %}
+
+    <p>
+        OULALALA !!!! Vous, vous êtes perdu sur le site ? NO STRESS retournez sur la  <a href="{{ path('Presentation') }}">page de présentation </a>
+    </p>
+{% endblock %}

@@ -1,0 +1,20 @@
+Presentation:
+  path:     /
+  defaults: { _controller: AppBundle:Presentation:index }
+
+Experience:
+  path:   /experience 
+  defaults: { _controller: AppBundle:Presentation:experience}
+
+Formation:
+  path:   /formation
+  defaults: { _controller: AppBundle:Presentation:formation}
+
+Recherche:
+  path:   /recherche
+  defaults: { _controller: AppBundle:Presentation:recherche}
+
+Contact:
+  path:    /contact
+  defaults: { _controller: AppBundle:Contact:index}
+
