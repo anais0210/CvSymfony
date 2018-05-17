@@ -18,3 +18,11 @@ Contact:
   path:    /contact
   defaults: { _controller: AppBundle:Contact:index}
 
+Evaluation:
+  path:   /evaluation
+  defaults: { _controller: AppBundle:Evaluation:evaluation}
+
+Ajouter:
+  path:   /ajouter
+  defaults: { _controller: AppBundle:Evaluation:ajouter}
+

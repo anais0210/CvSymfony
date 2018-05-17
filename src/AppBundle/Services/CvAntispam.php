@@ -1,8 +1,8 @@
 <?php
 
-// src/AppBundle/Antispam/CvAntispam.php
+// src/AppBundle/Services/CvAntispam.php
 
-namespace AppBundle\Antispam\CvAntispam;
+namespace AppBundle\Services\CvAntispam;
 
 class CvAntispam
 {

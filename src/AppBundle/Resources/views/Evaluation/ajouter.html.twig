@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+<h2> Ajouter un commentaire et une note </h2>
+	{{form_widget(form)}}
+
+
+</form>
+
+{{ render(controller('AppBundle:Evaluation:evaluation')) }}
+
+{% endblock %}

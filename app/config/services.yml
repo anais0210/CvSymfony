@@ -5,11 +5,13 @@ parameters:
 
 services:
   app.antispam:
-    class: AppBundle\Antispam\CvAntispam
+    class: AppBundle\Services\CvAntispam
     arguments: 
       - "@mailer"
       - %locale%
       - 10 
+  app.evaluation:
+    class: AppBundle\Services\EvaluationService
 
       
 
