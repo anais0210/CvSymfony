@@ -3,6 +3,8 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * Contact
@@ -25,6 +27,8 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="Nom", type="string", length=255)
+     * @Assert\Length(max=255)
+     * @Assert\Regex("#[^0-9]#", message="Veuillez renseigner un nom valide")
      */
     private $nom;
 
@@ -52,9 +56,9 @@ class Contact
     /**
      * @var string
      *
-     * @ORM\Column(name="société", type="string", length=255, nullable=true)
+     * @ORM\Column(name="societe", type="string", length=255, nullable=true)
      */
-    private $société;
+    private $societe;
 
 
     /**
@@ -164,27 +168,27 @@ class Contact
     }
 
     /**
-     * Set société
+     * Set societe
      *
-     * @param string $société
+     * @param string $societe
      *
      * @return Contact
      */
-    public function setSociété($société)
+    public function setSociete($societe)
     {
-        $this->société = $société;
+        $this->societe = $societe;
 
         return $this;
     }
 
     /**
-     * Get société
+     * Get societe
      *
      * @return string
      */
-    public function getSociété()
+    public function getSociete()
     {
-        return $this->société;
+        return $this->societe;
     }
 }
 

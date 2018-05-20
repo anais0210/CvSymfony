@@ -4,10 +4,9 @@
 
 
 <h2> Ajouter un commentaire et une note </h2>
-	{{form_widget(form)}}
-
-
-</form>
+	{{form_start(form)}}
+		{{form_widget(form)}}
+	{{form_end(form)}}
 
 {{ render(controller('AppBundle:Evaluation:evaluation')) }}
 
