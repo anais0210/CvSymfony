@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+  <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-preview">
+            <a href="{{path('Competences')}}">
+              <h2 class="post-title">
+                Compétences
+              </h2>
+              <h3 class="post-subtitle">
+                Les compétences ne remplaceront jamais la volonté de ce dépasser
+              </h3>
+            </a>
+            <p class="post-meta">
+            	Technologies : HTML 5 et CSS3 <br />
+ 				langages de programmation : PHP 7 <br />
+ 				Framework : Symfony <br />
+ 				Environnement : Linux (Ubuntu) <br />
+ 				Base de données : MySql <br />
+ 				CMS : Wordpress <br />
+ 				Systeme de versionning :<a href="https://github.com/anais0210?tab=repositories">Git</a>
+			</p>
+			<hr>
+          <div class="post-preview">
+            <a href="{{path('Competences')}}">
+              <h2 class="post-title">
+                Objectifs personnels
+              </h2>
+            </a>
+            <p class="post-meta">
+            	Gagner en autonomie <br />
+            	Améliorer et approfondir mes connaissances en Symfony avec l'envie un jour de pouvoir acquérir la certification délivré par SensioLabs <br />
+
+
+            	</p>
+          </div>
+          <hr>
+
+
+{% endblock %}

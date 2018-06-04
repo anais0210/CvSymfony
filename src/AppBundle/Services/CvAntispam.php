@@ -2,7 +2,7 @@
 
 // src/AppBundle/Services/CvAntispam.php
 
-namespace AppBundle\Services\CvAntispam;
+namespace AppBundle\Services;
 
 class CvAntispam
 {
@@ -10,7 +10,7 @@ class CvAntispam
 	private $locale;
 	private $minLength;
 
-	public function_construc(\Swift_Mailer $mailer, $locale, $minLength)
+	public function __construct(\Swift_Mailer $mailer, $locale, $minLength)
 	{
 		$this->$mailer 		=$mailer;
 		$this->$locale 		=$locale;
@@ -19,7 +19,7 @@ class CvAntispam
 
 	public function isSpam($text)
 	{
-		return strlen($text) < $this-> $minLength ;
+		return strlen($text) < $this-> $minLength;
 	}
 }
 

@@ -3,6 +3,7 @@
 namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -17,11 +18,21 @@ class EvaluationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('pseudo')
-            ->add('commentaire', TextareaType::class)
-            ->add('note')
-            ->add('envoyer', SubmitType::class)
-
+            ->add('pseudo', null, [
+                'attr' => ['class' => 'form-control', 'placeholder' => 'Pseudo'],
+                'label_attr' => ['class' => '']
+            ])
+            ->add('commentaire', TextareaType::class, [
+                'attr' => ['class' => 'form-control', 'placeholder' =>'commentaire'],
+                'label_attr' => ['class' =>'']
+            ])
+            ->add('envoyer', SubmitType::class,[
+                'attr' => ['class' => 'btn btn-primary'],
+            ])
+            ->add('note', HiddenType::class, [
+                'attr' => ['class' => 'star-input'],
+                'label_attr' => ['class' => 'hide'],
+            ])
         ;
 
     }

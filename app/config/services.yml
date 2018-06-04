@@ -9,9 +9,11 @@ services:
     arguments: 
       - "@mailer"
       - %locale%
-      - 10 
-  app.evaluation:
-    class: AppBundle\Services\EvaluationService
+      - 10
+
+  AppBundle\Services\EvaluationService:
+    autowire: true
+    autoconfigure: true
 
       
 

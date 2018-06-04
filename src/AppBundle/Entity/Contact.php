@@ -36,6 +36,8 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="Prenom", type="string", length=255)
+     * @Assert\Length(max=255)
+     * @Assert\Regex("#[^0-9]#", message="Veuillez renseigner un prenom valide")
      */
     private $prenom;
 
@@ -43,6 +45,8 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255)
+     * @Assert\Length(max=255)
+     * @Assert\Email(message="Veuillez renseigner une adresse email valide")
      */
     private $email;
 
@@ -50,6 +54,7 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="message", type="string", length=255)
+     * @Assert\Length(max=255)
      */
     private $message;
 
@@ -57,6 +62,7 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="societe", type="string", length=255, nullable=true)
+     * @Assert\Length(max=255)
      */
     private $societe;
 

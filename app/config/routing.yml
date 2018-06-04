@@ -1,3 +1,8 @@
+easy_admin_bundle :
+    resource : "@EasyAdminBundle/Controller/AdminController.php"
+    type :     annotation
+    prefix :   /admin
+
 Presentation:
   path:     /
   defaults: { _controller: AppBundle:Presentation:index }
@@ -26,3 +31,10 @@ Ajouter:
   path:   /ajouter
   defaults: { _controller: AppBundle:Evaluation:ajouter}
 
+Competences:
+  path:   /competences
+  defaults: { _controller: AppBundle:Presentation:competences}
+
+Cv:
+  path: /cv
+  defaults: { _controller: AppBundle:Cv:index }

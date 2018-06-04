@@ -1,5 +1,19 @@
+<h2 class="post-title"> Ce que les autres ont pensé de mon code et de mon site ! </h2>
+<p class="post-meta"> Mon site obtient une moyenne de {{ moyenne }}</p><hr>
 {% for evaluation in evaluations %}
-	{{ evaluation.note }}
-{% else %}
-	Pas d'évaluation pour le moment
+
+
+<p class="post-meta">
+        {{ evaluation.pseudo }} <br />
+		{{ evaluation.commentaire }} <br />
+		je te donne la note de {{ evaluation.note }} <br /> 
+</p><hr>
+
+
+
+
+
+
+
 {% endfor %}
+

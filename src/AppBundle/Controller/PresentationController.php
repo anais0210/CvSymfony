@@ -40,6 +40,11 @@ class PresentationController extends Controller
 		}
  	}
 
+    public function competencesAction()
+    {
+        return $this->render('AppBundle:Presentation:competences.html.twig');
+    }
+
 
 }
 

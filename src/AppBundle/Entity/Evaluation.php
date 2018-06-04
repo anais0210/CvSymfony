@@ -23,26 +23,29 @@ class Evaluation
     private $id;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="note", type="integer")
-     * @Assert\Type("integer")
-     * @Assert\NotNull(message="Veuillez renseigner une note")
-     * @Assert\Range(
-     *      min=0,
-     *      max=5,
-     *      minMessage= "La note doit être comprise entre 0 et 5",
-     *      maxMessage= "La note doit être comprise entre 0 et 5")
-     */
-    private $note;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="commentaire", type="string", length=255, nullable=true)
      * @Assert\Length(max=255)
      */
     private $commentaire;
+
+    /**
+     * @var bool
+     * @ORM\Column(name="confirmation", type="boolean")
+     * 
+     *
+     */
+    private $confirmation = false;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="note", type="integer")
+     *
+     */
+    private $note;
+
 
     /**
      * @var \DateTime
@@ -73,30 +76,6 @@ class Evaluation
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set note
-     *
-     * @param integer $note
-     *
-     * @return Evaluation
-     */
-    public function setNote($note)
-    {
-        $this->note = $note;
-
-        return $this;
-    }
-
-    /**
-     * Get note
-     *
-     * @return int
-     */
-    public function getNote()
-    {
-        return $this->note;
     }
 
     /**
@@ -170,5 +149,59 @@ class Evaluation
     {
         return $this->pseudo;
     }
+
+
+    /**
+     * Set note
+     *
+     * @param sint 
+     *
+     * @return Evaluation
+     */
+    public function setNote($note)
+    {
+        $this->note = $note;
+
+        return $this;
+    }
+
+    /**
+     * Get note
+     *
+     * @return int
+     */
+    public function getNote()
+    {
+        return $this->note;
+    }
+
+     /**
+     * Set confirmation
+     *
+     * @param sint 
+     *
+     * @return Evaluation
+     */
+    public function setConfirmation($confirmation)
+    {
+        $this->confirmation = $confirmation;
+
+        return $this;
+    }
+
+    /**
+     * Get confirmation
+     *
+     * @return int
+     */
+    public function getConfirmation()
+    {
+        return $this->confirmation;
+    }
+
+
+
+
+
 
 }
