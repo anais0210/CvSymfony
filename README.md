@@ -1,8 +1,15 @@
 CvSymfony
 =========
 
+Introduction:
+	Cv basé sur Symfony 3.4 .
+	Premier projet, Découverte du Framework suite a la formation OpenClassRooms
 
+1. Installation
+	git clone https://github.com/anais0210/CvSymfony.git
+	composer install
+	php bin/console server:run 
 
-A Symfony project created on April 28, 2018, 7:58 pm.
+2. Controle
 
-
+ Psr: vendor/bin/phpcs --standard=vendor/leaphub/phpcs-symfony2-standard/leaphub/phpcs/Symfony2/ --extensions=php src/

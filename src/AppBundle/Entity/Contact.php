@@ -5,9 +5,8 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
-
 /**
- * Contact
+ * Contact.
  *
  * @ORM\Table(name="contact")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\ContactRepository")
@@ -66,9 +65,8 @@ class Contact
      */
     private $societe;
 
-
     /**
-     * Get id
+     * Get id.
      *
      * @return int
      */
@@ -78,7 +76,7 @@ class Contact
     }
 
     /**
-     * Set nom
+     * Set nom.
      *
      * @param string $nom
      *
@@ -92,7 +90,7 @@ class Contact
     }
 
     /**
-     * Get nom
+     * Get nom.
      *
      * @return string
      */
@@ -102,7 +100,7 @@ class Contact
     }
 
     /**
-     * Set prenom
+     * Set prenom.
      *
      * @param string $prenom
      *
@@ -116,7 +114,7 @@ class Contact
     }
 
     /**
-     * Get prenom
+     * Get prenom.
      *
      * @return string
      */
@@ -126,7 +124,7 @@ class Contact
     }
 
     /**
-     * Set email
+     * Set email.
      *
      * @param string $email
      *
@@ -140,7 +138,7 @@ class Contact
     }
 
     /**
-     * Get email
+     * Get email.
      *
      * @return string
      */
@@ -150,7 +148,7 @@ class Contact
     }
 
     /**
-     * Set message
+     * Set message.
      *
      * @param string $message
      *
@@ -164,7 +162,7 @@ class Contact
     }
 
     /**
-     * Get message
+     * Get message.
      *
      * @return string
      */
@@ -174,7 +172,7 @@ class Contact
     }
 
     /**
-     * Set societe
+     * Set societe.
      *
      * @param string $societe
      *
@@ -188,7 +186,7 @@ class Contact
     }
 
     /**
-     * Get societe
+     * Get societe.
      *
      * @return string
      */
@@ -197,4 +195,3 @@ class Contact
         return $this->societe;
     }
 }
-

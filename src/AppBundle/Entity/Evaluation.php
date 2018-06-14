@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Evaluation
+ * Evaluation.
  *
  * @ORM\Table(name="evaluation")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\EvaluationRepository")
@@ -33,8 +33,6 @@ class Evaluation
     /**
      * @var bool
      * @ORM\Column(name="confirmation", type="boolean")
-     * 
-     *
      */
     private $confirmation = false;
 
@@ -42,10 +40,8 @@ class Evaluation
      * @var int
      *
      * @ORM\Column(name="note", type="integer")
-     *
      */
     private $note;
-
 
     /**
      * @var \DateTime
@@ -62,14 +58,16 @@ class Evaluation
      * @Assert\Length(max=40)
      */
     private $pseudo;
-
+    /**
+     * Evaluation constructeur
+     */
     public function __construct()
     {
         $this->date = new \DateTime();
     }
 
     /**
-     * Get id
+     * Get id.
      *
      * @return int
      */
@@ -79,7 +77,7 @@ class Evaluation
     }
 
     /**
-     * Set commentaire
+     * Set commentaire.
      *
      * @param string $commentaire
      *
@@ -93,7 +91,7 @@ class Evaluation
     }
 
     /**
-     * Get commentaire
+     * Get commentaire.
      *
      * @return string
      */
@@ -103,7 +101,7 @@ class Evaluation
     }
 
     /**
-     * Set date
+     * Set date.
      *
      * @param \DateTime $date
      *
@@ -117,7 +115,7 @@ class Evaluation
     }
 
     /**
-     * Get date
+     * Get date.
      *
      * @return \DateTime
      */
@@ -127,7 +125,7 @@ class Evaluation
     }
 
     /**
-     * Set pseudo
+     * Set pseudo.
      *
      * @param string $pseudo
      *
@@ -141,7 +139,7 @@ class Evaluation
     }
 
     /**
-     * Get pseudo
+     * Get pseudo.
      *
      * @return string
      */
@@ -150,11 +148,10 @@ class Evaluation
         return $this->pseudo;
     }
 
-
     /**
-     * Set note
+     * Set note.
      *
-     * @param sint 
+     * @param sint $note
      *
      * @return Evaluation
      */
@@ -166,7 +163,7 @@ class Evaluation
     }
 
     /**
-     * Get note
+     * Get note.
      *
      * @return int
      */
@@ -175,10 +172,10 @@ class Evaluation
         return $this->note;
     }
 
-     /**
-     * Set confirmation
+    /**
+     * SetConfirmation.
      *
-     * @param sint 
+     * @param sint $confirmation
      *
      * @return Evaluation
      */
@@ -190,7 +187,7 @@ class Evaluation
     }
 
     /**
-     * Get confirmation
+     * Get confirmation.
      *
      * @return int
      */
@@ -198,10 +195,4 @@ class Evaluation
     {
         return $this->confirmation;
     }
-
-
-
-
-
-
 }
