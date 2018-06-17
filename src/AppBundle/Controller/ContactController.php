@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Contact;
 use AppBundle\Form\ContactType;
+use AppBundle\Services\CvAntispam;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -25,6 +26,10 @@ class ContactController extends Controller
 
         $form->handleRequest($request);
         if ($form->isSubmitted() and $form->isValid()) {
+            if ($this->get(CvAntispam::class)->isSpam($contact->getMessage())) {
+                throw new \Exception('Vous avez été considéré comme un spam!');
+            }
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($contact);
             $em->flush();

@@ -7,22 +7,26 @@ namespace AppBundle\Services;
  */
 class CvAntispam
 {
-    private $mailer;
+    /** 
+     * @var string 
+     */
     private $locale;
+
+    /** 
+     * @var int 
+     */
     private $minLength;
 
      /**
      * CvAntispam constructeur
      * 
-     * @param Swift_Mailer $mailer
-     * @param Swift_Mailer $locale
-     * @param Swift_Mailer $minLength
+     * @param string       $locale
+     * @param int          $minLength
      */
-    public function __construct(\Swift_Mailer $mailer, $locale, $minLength)
+    public function __construct($locale, $minLength)
     {
-        $this->$mailer = $mailer;
-        $this->$locale = $locale;
-        $this->$minLength = (int) $minLength;
+        $this->locale = $locale;
+        $this->minLength = (int) $minLength;
     }
     /**
      * @param string $text
@@ -30,6 +34,6 @@ class CvAntispam
      */
     public function isSpam($text)
     {
-        return strlen($text)<$this->$minLength;
+        return strlen($text) < $this->minLength;
     }
 }

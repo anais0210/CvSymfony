@@ -4,10 +4,10 @@ parameters:
 #    parameter_name: value
 
 services:
-  app.antispam:
-    class: AppBundle\Services\CvAntispam
-    arguments: 
-      - "@mailer"
+  AppBundle\Services\CvAntispam:
+    autowire: true
+    autoconfigure: true
+    arguments:
       - %locale%
       - 10
 

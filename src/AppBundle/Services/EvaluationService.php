@@ -35,6 +35,6 @@ class EvaluationService
             $total += $evaluation->getNote();
         }
 
-        return $total / count($evaluations);
+        return count($evaluations) !== 0 ? $total / count($evaluations) : 0;
     }
 }

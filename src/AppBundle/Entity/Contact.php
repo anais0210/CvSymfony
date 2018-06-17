@@ -27,7 +27,7 @@ class Contact
      *
      * @ORM\Column(name="Nom", type="string", length=255)
      * @Assert\Length(max=255)
-     * @Assert\Regex("#[^0-9]#", message="Veuillez renseigner un nom valide")
+     * @Assert\NotNull(message="Ce champ est obligatoire")
      */
     private $nom;
 
@@ -36,7 +36,7 @@ class Contact
      *
      * @ORM\Column(name="Prenom", type="string", length=255)
      * @Assert\Length(max=255)
-     * @Assert\Regex("#[^0-9]#", message="Veuillez renseigner un prenom valide")
+     * @Assert\NotNull(message="Ce champ est obligatoire")
      */
     private $prenom;
 
@@ -46,14 +46,15 @@ class Contact
      * @ORM\Column(name="email", type="string", length=255)
      * @Assert\Length(max=255)
      * @Assert\Email(message="Veuillez renseigner une adresse email valide")
+     * @Assert\NotNull(message="Ce champ est obligatoire")
      */
     private $email;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="message", type="string", length=255)
-     * @Assert\Length(max=255)
+     * @ORM\Column(name="message", type="text")
+     * @Assert\NotNull(message="Ce champ est obligatoire")
      */
     private $message;
 
